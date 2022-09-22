@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+RewriteRule ^edit-assessor/([a-zA-Z0-9-]*)$ edit-assessor.php?u_id=$1 [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+SetEnv HTTP_MY_SECRET "dc698f132cd0efe8584130b0cce9fa84"
